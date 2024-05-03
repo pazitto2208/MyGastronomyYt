@@ -41,6 +41,70 @@ export default class OrdersDataAccess {
                     as: 'orderItems.itemDetails'
                 }
             },
+            {
+                $group: {
+                    _id: '$_id',
+                    userDetails: { $first: '$userDetails' },
+                    orderItems: { $push: '$orderItems' },
+                    pickupStatus: { $first: '$pickupStatus' },
+                    pickupTime: { $first: '$pickupTime' }
+                }
+            }
+        ])
+        .toArray()
+
+        return result
+    }
+
+    async getOrdersByUserId(userId) {
+        const result = await Mongo.db
+        .collection(collectionName)
+        .aggregate([
+            {
+                $match: { userId: new ObjectId(userId) }
+            }, 
+            {
+                $lookup: {
+                    from: 'orderItems',
+                    localField: '_id',
+                    foreignField: 'orderId',
+                    as: 'orderItems'
+                }
+            },
+            {
+                $lookup: {
+                    from: 'users',
+                    localField: 'userId',
+                    foreignField: '_id',
+                    as: 'userDetails'
+                }
+            },
+            {
+                $project: {
+                    'userDetails.password': 0,
+                    'userDetails.salt': 0,
+                }
+            },
+            {
+                $unwind: '$orderItems'
+            },
+            {
+                $lookup: {
+                    from: 'plates',
+                    localField: 'orderItems.plateId',
+                    foreignField: '_id',
+                    as: 'orderItems.itemDetails'
+                }
+            },
+            {
+                $group: {
+                    _id: '$_id',
+                    userDetails: { $first: '$userDetails' },
+                    orderItems: { $push: '$orderItems' },
+                    pickupStatus: { $first: '$pickupStatus' },
+                    pickupTime: { $first: '$pickupTime' }
+                }
+            }
         ])
         .toArray()
 
@@ -75,9 +139,19 @@ export default class OrdersDataAccess {
     }
 
     async deleteOrder (orderId) {
-        const result = await Mongo.db
+
+        const itemsToDelete = await Mongo.db
+        .collection('orderItems')
+        .deleteMany({ orderId: new ObjectId(orderId) })
+
+        const orderToDelete = await Mongo.db
         .collection(collectionName)
         .findOneAndDelete({ _id: new ObjectId(orderId) })
+
+        const result = {
+            itemsToDelete,
+            orderToDelete
+        }
 
         return result
     }
