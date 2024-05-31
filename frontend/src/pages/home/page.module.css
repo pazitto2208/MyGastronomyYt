@@ -1,0 +1,53 @@
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    padding: .5em;
+}
+
+.foodSection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+	background-color: #004643;
+    color: #faf0ca;
+    padding: 2em;
+    border-radius: 2em;
+}
+
+.foodSection div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.2em;
+}
+
+.socialButtonsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.2em;
+}
+
+.socialButton {
+    width: 100%;
+}
+
+.contactSection {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+}
+
+@media screen and (max-width: 1000px) {
+    .foodSection {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .foodSection {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
