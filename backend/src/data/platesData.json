@@ -1,110 +1,85 @@
 [
-  {
-    "name": "Squid Stew with Peas",
-    "price": "10.99",
-    "available": false,
-    "description": "Fresh squid slowly cooked in a stew with fresh peas and tomatoes reveal an explosion of flavors that will make you come back for another bite!",
-    "ingredients": [
-      "Fresh squid",
-      "Fresh peas",
-      "Tomatoes"
-    ],
-    "category": "First"
-  },
-  {
-    "name": "Tortellini in Chicken Broth",
-    "price": 8.99,
-    "available": true,
-    "description": "Our homemade tortellini, filled with meat, float in a warm chicken broth, bringing you the comfort and warmth of real Italian cuisine!",
-    "ingredients": [
-      "Homemade tortellini",
-      "Chicken broth"
-    ],
-    "category": "First"
-  },
-  {
-    "name": "Shrimp and Vegetable Salad",
-    "price": 10.99,
-    "available": true,
-    "description": "A fresh mixed salad with cooked shrimp, seasonal vegetables, and a secret dressing that will make your lunch or dinner shine!",
-    "ingredients": [
-      "Cooked shrimp",
-      "Seasonal vegetables",
-      "Salad dressing"
-    ],
-    "category": "Side"
-  },
-  {
-    "name": "Seafood Salad",
-    "price": "7.99",
-    "available": true,
-    "description": "A fresh seafood salad with mixed seafood, dressed with the liquid gold of extra virgin olive oil, will take you on a taste journey you will always remember!",
-    "ingredients": [
-      "Mixed seafood",
-      "Extra virgin olive oil"
-    ],
-    "category": "Appetizer"
-  },
-  {
-    "name": "Lasagna Bolognese",
-    "price": 11.99,
-    "available": true,
-    "description": "Layers of egg pasta interspersed with a rich minced meat sauce and a fluffy béchamel sauce. Lasagna Bolognese will make you feel at home!",
-    "ingredients": [
-      "Béchamel sauce",
-      "Minced meat sauce",
-      "Egg pasta",
-      "Basil"
-    ],
-    "category": "First"
-  },
-  {
-    "name": "Whole Grain Bread",
-    "price": 5.99,
-    "available": true,
-    "description": "Freshly baked whole grain bread, crispy on the outside and soft on the inside, perfect to enjoy with every dish!",
-    "ingredients": [
-      "Whole grain flour",
-      "Water",
-      "Yeast",
-      "Salt"
-    ],
-    "category": "Other"
-  },
-  {
-    "available": true,
-    "category": "Second",
-    "description": "Soft ground meatballs, immersed in a tomato and basil sauce, will make you say 'Mamma mia!' after every bite!",
-    "ingredients": [
-      "Ground meat",
-      "Tomato sauce",
-      "Basil", 
-      "Butter"
-    ],
-    "name": "Meatballs in Tomato Sauce",
-    "price": "11.99"
-  },
-  {
-    "price": "8.99",
-    "description": "Smoked swordfish with seared vegetables and sesame seeds, a delightful combination of flavors!",
-    "category": "Appetizer",
-    "available": true,
-    "name": "Smoked Swordfish with Seared Vegetables",
-    "ingredients": [
-      "Smoked swordfish",
-      "Seared vegetables",
-      "Sesame seeds"
-    ]
-  },
-  {
-    "name": "Grilled Salmon",
-    "price": 16.99,
-    "available": true,
-    "description": "A delicious grilled fresh salmon fillet, accompanied by a side of mixed vegetables that will make your palate happy!",
-    "ingredients": [
-      "Salmon fillet",
-      "Mixed vegetables"
-    ],
-    "category": "Second"
-  }
+    {
+        "name":"Squid Stew with Peas",
+        "price":10.99,
+        "available":false,
+        "description":"Fresh squid slowly cooked in a stew with fresh peas and tomatoes reveal an explosion of flavors that will make you come back for another bite!",
+        "ingredients":["Fresh squid","Fresh peas","Tomatoes"],
+        "imgUrl":"/imgs/plates/squidStewwithPeas.png",
+        "category":"First"
+    },
+    {
+        "name":"Tortellini in Chicken Broth",
+        "price": 8.99,
+        "available":true,
+        "description":"Our homemade tortellini, filled with meat, float in a warm chicken broth, bringing you the comfort and warmth of real Italian cuisine!",
+        "ingredients":["Homemade tortellini","Chicken broth"],
+        "imgUrl":"/imgs/plates/tortellini.png",
+        "category":"First"
+    },
+    {
+        "name":"Shrimp and Vegetable Salad",
+        "price":10.99,
+        "available":true,
+        "description":"A fresh mixed salad with cooked shrimp, seasonal vegetables, and a secret dressing that will make your lunch or dinner shine!",
+        "ingredients":["Cooked shrimp","Seasonal vegetables","Salad dressing"],
+        "imgUrl":"/imgs/plates/shrimpandVegetableSalad.png",
+        "category":"Side"
+    },
+    {
+        "name":"Seafood Salad",
+        "price":7.99,
+        "available":true,
+        "description":"A fresh seafood salad with mixed seafood, dressed with the liquid gold of extra virgin olive oil, will take you on a taste journey you will always remember!",
+        "ingredients":["Mixed seafood","Extra virgin olive oil"],
+        "imgUrl":"/imgs/plates/seafoodSalad.png",
+        "category":"Appetizer"
+    },
+    {
+        "name":"Lasagna Bolognese",
+        "price":11.99,
+        "available":true,
+        "description":"Layers of egg pasta interspersed with a rich minced meat sauce and a fluffy béchamel sauce. Lasagna Bolognese will make you feel at home!",
+        "ingredients":["Béchamel sauce","Minced meat sauce","Egg pasta","Basil"],
+        "imgUrl":"/imgs/plates/lasagna.png",
+        "category":"First"
+    },
+    {
+        "name":"Whole Grain Bread",
+        "price":5.99,
+        "available":true,
+        "description":"Freshly baked whole grain bread, crispy on the outside and soft on the inside, perfect to enjoy with every dish!",
+        "ingredients":["Whole grain flour","Water","Yeast","Salt"],
+        "imgUrl":"/imgs/plates/bread.png",
+        "category":"Other"
+    },
+    {
+        
+        "available":true,
+        "category":"Second",
+        "description":"Soft ground meatballs, immersed in a tomato and basil sauce, will make you say 'Mamma mia!' after every bite!",
+        "imgUrl":"/imgs/plates/meatBalls.png",
+        "ingredients":["Ground meat","Tomato sauce","Basil", "Butter"],
+        "name":"Meatballs in Tomato Sauce",
+        "price":11.99
+    },
+    {
+        
+        "price":8.99,
+        "description":"Smoked swordfish with seared vegetables and sesame seeds, a delightful combination of flavors!",
+        "category":"Appetizer",
+        "available":true,
+        "name":"Smoked Swordfish with Seared Vegetables",
+        "ingredients":["Smoked swordfish","Seared vegetables","Sesame seeds"],
+        "imgUrl":"/imgs/plates/swordfish.png"
+    },
+    {
+        "name":"Grilled Salmon",
+        "price":16.99,
+        "available":true,
+        "description":"A delicious grilled fresh salmon fillet, accompanied by a side of mixed vegetables that will make your palate happy!",
+        "ingredients":["Salmon fillet","Mixed vegetables"],
+        "imgUrl":"/imgs/plates/grilledSalmon.png",
+        "category":"Second"
+    }
 ]
