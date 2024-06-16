@@ -1,0 +1,37 @@
+.cardContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 320px;
+    height: 420px;
+}
+
+.cardContainer img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.5em;
+}
+
+.cardContent {
+    position: absolute;
+    color: #fff;
+    padding: 0.5em;
+}
+
+.cardContainer:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0, 0, 0, 0.8));
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+}
+
+.price {
+    text-align: right;
+}
