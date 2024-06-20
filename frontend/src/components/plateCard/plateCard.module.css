@@ -2,6 +2,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: end;
     width: 320px;
     height: 420px;
@@ -15,9 +16,13 @@
 }
 
 .cardContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
     position: absolute;
     color: #fff;
-    padding: 0.5em;
+    width: 90%;
+    padding-bottom: 0.5em;
 }
 
 .cardContainer:before {
